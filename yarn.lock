@@ -3562,10 +3562,31 @@
     "es-abstract" "^1.20.4"
     "es-shim-unscopables" "^1.0.0"
 
+<<<<<<< HEAD
 "array.prototype.reduce@^1.0.5":
   "integrity" "sha512-kDdugMl7id9COE8R7MHF5jWk7Dqt/fs4Pv+JXoICnYwqpjjjbUurz6w5fT5IG6brLdJhv6/VoHB0H7oyIBXd+Q=="
   "resolved" "https://registry.npmjs.org/array.prototype.reduce/-/array.prototype.reduce-1.0.5.tgz"
   "version" "1.0.5"
+=======
+axe-core@^4.6.2:
+  version "4.7.2"
+  resolved "https://registry.npmjs.org/axe-core/-/axe-core-4.7.2.tgz"
+  integrity sha512-zIURGIS1E1Q4pcrMjp+nnEh+16G56eG/MUllJH8yEvw7asDo7Ac9uhC9KIH5jzpITueEZolfYglnCGIuSBz39g==
+
+axios@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-1.4.0.tgz#38a7bf1224cd308de271146038b551d725f0be1f"
+  integrity sha512-S4XCWMEmzvo64T9GfvQDOXgYRDJ/wsSZc7Jvdgx5u1sd0JwsuPLqb3SYmusag+edF6ziyMensPVqLTSc1PiSEA==
+  dependencies:
+    follow-redirects "^1.15.0"
+    form-data "^4.0.0"
+    proxy-from-env "^1.1.0"
+
+axobject-query@^3.1.1:
+  version "3.2.1"
+  resolved "https://registry.npmjs.org/axobject-query/-/axobject-query-3.2.1.tgz"
+  integrity sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==
+>>>>>>> e489671dbb1c56b25ba426f862f87cc887e67aad
   dependencies:
     "call-bind" "^1.0.2"
     "define-properties" "^1.1.4"
@@ -6092,10 +6113,17 @@
   "resolved" "https://registry.npmjs.org/flow-parser/-/flow-parser-0.214.0.tgz"
   "version" "0.214.0"
 
+<<<<<<< HEAD
 "follow-redirects@^1.0.0":
   "integrity" "sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA=="
   "resolved" "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
   "version" "1.15.2"
+=======
+follow-redirects@^1.0.0, follow-redirects@^1.15.0:
+  version "1.15.2"
+  resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.2.tgz"
+  integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
+>>>>>>> e489671dbb1c56b25ba426f862f87cc887e67aad
 
 "for-each@^0.3.3":
   "integrity" "sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw=="
@@ -6132,10 +6160,26 @@
     "combined-stream" "^1.0.8"
     "mime-types" "^2.1.12"
 
+<<<<<<< HEAD
 "formdata-polyfill@^4.0.10":
   "integrity" "sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g=="
   "resolved" "https://registry.npmjs.org/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz"
   "version" "4.0.10"
+=======
+form-data@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/form-data/-/form-data-4.0.0.tgz#93919daeaf361ee529584b9b31664dc12c9fa452"
+  integrity sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==
+  dependencies:
+    asynckit "^0.4.0"
+    combined-stream "^1.0.8"
+    mime-types "^2.1.12"
+
+formdata-polyfill@^4.0.10:
+  version "4.0.10"
+  resolved "https://registry.npmjs.org/formdata-polyfill/-/formdata-polyfill-4.0.10.tgz"
+  integrity sha512-buewHzMvYL29jdeQTVILecSaZKnt/RJWjoZCF5OW60Z67/GmSLBkOFM7qh1PI3zFNtJbaZL5eQu1vLfazOwj4g==
+>>>>>>> e489671dbb1c56b25ba426f862f87cc887e67aad
   dependencies:
     "fetch-blob" "^3.1.2"
 
@@ -10234,10 +10278,22 @@
     "forwarded" "0.2.0"
     "ipaddr.js" "1.9.1"
 
+<<<<<<< HEAD
 "psl@^1.1.33":
   "integrity" "sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag=="
   "resolved" "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz"
   "version" "1.9.0"
+=======
+proxy-from-env@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/proxy-from-env/-/proxy-from-env-1.1.0.tgz#e102f16ca355424865755d2c9e8ea4f24d58c3e2"
+  integrity sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==
+
+psl@^1.1.33:
+  version "1.9.0"
+  resolved "https://registry.npmjs.org/psl/-/psl-1.9.0.tgz"
+  integrity sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==
+>>>>>>> e489671dbb1c56b25ba426f862f87cc887e67aad
 
 "punycode@^2.1.0", "punycode@^2.1.1":
   "integrity" "sha512-rRV+zQD8tVFys26lAGR9WUuS4iUAngJScM+ZRSKtvl5tKeZ2t5bvdNFdNHBW9FWR4guGHlgmsZ1G7BSm2wTbuA=="
