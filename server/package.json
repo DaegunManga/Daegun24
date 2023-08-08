@@ -48,6 +48,8 @@
   },
   "dependencies": {
     "@fastify/cors": "^8.3.0",
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.3",
     "dotenv": "^16.3.1",
     "fastify": "^4.21.0",
     "node-fetch": "^3.3.2",

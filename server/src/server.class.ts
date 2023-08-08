@@ -8,6 +8,7 @@ import fastifyCors, { FastifyCorsOptions } from '@fastify/cors';
 
 import { CustomError, ErrorType } from './utils/errors/customError.class';
 import rootRoute from './routes';
+import SwaggerPlugin from './utils/plugins/swagger';
 
 export default class Server {
   private readonly app: FastifyInstance<
@@ -26,6 +27,8 @@ export default class Server {
 
     try {
       void this.app.register(fastifyCors, this.corsOptions);
+      void this.app.register(SwaggerPlugin);
+
       void this.app.register(rootRoute, { prefix: '/' });
     } catch (err) {
       this.app.log.error(err);
