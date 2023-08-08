@@ -22,8 +22,8 @@ export class UserEntity extends BaseEntity {
   @Column('int', { default: 1 })
   year: number;
 
-  @Column('int', { default: 1 })
-  class: number;
+  @Column('int', { default: 1, name: 'class' })
+  classNo: number;
 
   @Column('date', { nullable: true })
   accepted: Date;
@@ -33,7 +33,4 @@ export class UserEntity extends BaseEntity {
 
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
-
-  @DeleteDateColumn({ name: 'deleted_at' })
-  deletedAt: Date;
 }
