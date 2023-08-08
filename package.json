@@ -7,5 +7,21 @@
   "author": "lukekeum <lukekeum11@gmail.com> (http://github.com/lukekeum)",
   "license": "MIT",
   "private": "true",
-  "workspaces": ["admin", "app", "server"]
+  "workspaces": ["admin", "app", "server"],
+  "scripts": {
+    "postinstall": "patch-package",
+    "server": "yarn workspace server",
+    "app": "yarn workspace app",
+    "admin": "yarn workspace admin"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^5.37.0",
+    "eslint": "^8.23.1",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0"
+  }
 }
