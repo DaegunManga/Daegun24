@@ -9,6 +9,17 @@
     "start:dev": "NODE_ENV=development ts-node-dev -r tsconfig-paths/register src/index.ts | pino-pretty",
     "test": "NODE_ENV=test node -r tsconfig-paths/register scripts/setupTests.js"
   },
+  "dependencies": {
+    "@fastify/cors": "^8.3.0",
+    "@fastify/swagger": "^8.8.0",
+    "@fastify/swagger-ui": "^1.9.3",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.21.0",
+    "node-fetch": "^3.3.2",
+    "pg": "^8.11.2",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.3.17"
+  },
   "devDependencies": {
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.8",
@@ -45,13 +56,5 @@
     "setupFilesAfterEnv": [
       "<rootDir>/src/utils/tests/setup.ts"
     ]
-  },
-  "dependencies": {
-    "@fastify/cors": "^8.3.0",
-    "dotenv": "^16.3.1",
-    "fastify": "^4.21.0",
-    "node-fetch": "^3.3.2",
-    "pg": "^8.11.2",
-    "typeorm": "^0.3.17"
   }
 }
