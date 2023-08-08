@@ -1,0 +1,19 @@
+version: "3"
+services:
+    database:
+        image: postgres:latest
+        container_name: daegun24-databsae
+        restart: always
+        ports:
+            - "5500:5432"
+        environment:
+            POSTGRES_USER: "daegun24"
+            POSTGRES_PASSWORD: "daegun24"
+        volumes:
+            - ./db:/var/lib/postgresql/data
+    cache:
+        image: redis:latest
+        container_name: daegun24-cache
+        restart: always
+        ports:
+            - "5501:6379"
