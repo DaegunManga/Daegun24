@@ -1,0 +1,11 @@
+{
+  "name": "daegun24",
+  "version": "1.0.0",
+  "description": "Daegun High School Council Govern App",
+  "main": "index.js",
+  "repository": "https://github.com/DaegunManga/Daegun24",
+  "author": "lukekeum <lukekeum11@gmail.com> (http://github.com/lukekeum)",
+  "license": "MIT",
+  "private": "true",
+  "workspaces": ["admin", "app", "server"]
+}

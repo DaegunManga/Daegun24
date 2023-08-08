@@ -1,0 +1,7 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "lukekeum <lukekeum11@gmail.com> (http://github.com/lukekeum)",
+  "license": "MIT"
+}
