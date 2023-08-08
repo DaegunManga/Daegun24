@@ -20,6 +20,13 @@
   align-items: center;
 }
 
+.login_btn {
+  margin-top: 1rem;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+
 .login_explain {
   margin-top: 2rem;
   font-size: 1.2rem;
