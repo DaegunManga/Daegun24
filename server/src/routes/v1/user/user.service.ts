@@ -1,4 +1,5 @@
 import { UserEntity } from '@src/entities/User.entity';
+import { CustomError, ErrorType } from '@src/utils/errors/customError.class';
 import { IsNull, Not } from 'typeorm';
 import { GetUserQuery } from './user.types';
 
@@ -25,5 +26,40 @@ export default class UserService {
     };
   }
 
-  static async AcceptUser(id?: string, name?: string) {}
+  static async AcceptUser(id: string) {
+    const user = await UserEntity.findOne({ where: { userId: id } });
+
+    if (!user) {
+      throw new CustomError({
+        type: ErrorType.NOT_FOUND,
+        message: 'User not exists',
+      });
+    }
+
+    user.accepted = new Date();
+    await user.save();
+
+    return {
+      result: true,
+      data: { user },
+    };
+  }
+
+  static async DeleteUser(id: string) {
+    const user = await UserEntity.findOne({ where: { userId: id } });
+
+    if (!user) {
+      throw new CustomError({
+        type: ErrorType.NOT_FOUND,
+        message: 'User not exists',
+      });
+    }
+
+    await user.remove();
+
+    return {
+      result: true,
+      data: { user },
+    };
+  }
 }

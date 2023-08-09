@@ -1,6 +1,11 @@
 import { FastifyPluginAsync } from 'fastify';
 import UserService from './user.service';
-import { GetUserQuery, RegisterRequestBody } from './user.types';
+import {
+  AcceptUserQuery,
+  DeleteUserQuery,
+  GetUserQuery,
+  RegisterRequestBody,
+} from './user.types';
 
 const userRoute: FastifyPluginAsync = async (fastify, opts) => {
   fastify.post<{ Body: RegisterRequestBody }>(
@@ -21,7 +26,20 @@ const userRoute: FastifyPluginAsync = async (fastify, opts) => {
     return UserService.GetUser(filter);
   });
 
-  fastify.post('/accept-user', async (req) => {});
+  fastify.post<{ Querystring: AcceptUserQuery }>(
+    '/accept-user',
+    async (req) => {
+      const { id } = req.query;
+
+      return UserService.AcceptUser(id);
+    }
+  );
+
+  fastify.delete<{ Querystring: DeleteUserQuery }>('/delete', async (req) => {
+    const { id } = req.query;
+
+    return UserService.DeleteUser(id);
+  });
 };
 
 export default userRoute;

@@ -7,4 +7,10 @@ export interface GetUserQuery {
   filter: 'accepted' | 'not-accepted' | 'all' | undefined;
 }
 
-export interface AcceptUserBody {}
+export interface AcceptUserQuery {
+  id: string;
+}
+
+export interface DeleteUserQuery {
+  id: string;
+}
