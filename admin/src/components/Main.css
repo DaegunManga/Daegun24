@@ -2,43 +2,9 @@
 
 }
 
-.LeftBar {
-    background-color: black;
-    width: 10rem;
-    height: 100vw;
-}
+
 
 .MainPage {
 
 }
 
-.MainText {
-    padding-left: 2rem;
-    margin-top: 2rem;
-    color: white;
-}
-
-.Nav_Link {
-    text-decoration: none;
-}
-
-.Nav_Text {
-    color: white;
-}
-
-.Nav_Link:hover > .Nav_Text {
-    color: gray;
-}
-
-
-.icon {
-    width: 1rem;
-    height: auto;
-}
-
-.bold_line{
-    height: 0.2rem;
-
-    color: white;
-    background-color: white;
-}
