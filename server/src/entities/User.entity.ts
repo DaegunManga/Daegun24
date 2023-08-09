@@ -1,23 +1,27 @@
 import {
   BaseEntity,
+  BeforeInsert,
   Column,
   CreateDateColumn,
-  DeleteDateColumn,
   Entity,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import bcrypt from 'bcrypt';
 
 @Entity('users')
 export class UserEntity extends BaseEntity {
   @PrimaryGeneratedColumn('uuid', { name: 'user_id' })
   userId: string;
 
-  @Column('varchar', { nullable: false })
+  @Column('varchar')
   email: string;
 
-  @Column('varchar', { nullable: false })
+  @Column('varchar')
   name: string;
+
+  @Column('varchar')
+  password: string;
 
   @Column('int', { default: 1 })
   year: number;
@@ -33,4 +37,9 @@ export class UserEntity extends BaseEntity {
 
   @UpdateDateColumn({ name: 'updated_at' })
   updatedAt: Date;
+
+  @BeforeInsert()
+  async encryptPassword() {
+    this.password = await bcrypt.hash(this.password, 10);
+  }
 }

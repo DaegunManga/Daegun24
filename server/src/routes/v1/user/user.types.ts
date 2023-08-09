@@ -1,6 +1,7 @@
 export interface RegisterRequestBody {
   email: string;
   name: string;
+  password: string;
 }
 
 export interface GetUserQuery {

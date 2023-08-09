@@ -4,8 +4,20 @@ import { IsNull, Not } from 'typeorm';
 import { GetUserQuery } from './user.types';
 
 export default class UserService {
-  static async RegisterRequest(name: string, year: number, classNo: number) {
-    const user = await UserEntity.create({ name, year, classNo }).save();
+  static async RegisterRequest(
+    email: string,
+    name: string,
+    year: number,
+    classNo: number,
+    password: string
+  ) {
+    const user = await UserEntity.create({
+      email,
+      name,
+      password,
+      year,
+      classNo,
+    }).save();
 
     return { result: true, data: { user } };
   }

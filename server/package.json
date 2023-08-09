@@ -13,6 +13,7 @@
     "@fastify/cors": "^8.3.0",
     "@fastify/swagger": "^8.8.0",
     "@fastify/swagger-ui": "^1.9.3",
+    "bcrypt": "^5.1.0",
     "dotenv": "^16.3.1",
     "fastify": "^4.21.0",
     "node-fetch": "^3.3.2",
@@ -21,6 +22,7 @@
     "typeorm": "^0.3.17"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^29.5.3",
     "@types/node": "^20.4.8",
     "@types/node-fetch": "^2.6.4",

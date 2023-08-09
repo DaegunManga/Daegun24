@@ -11,12 +11,12 @@ const userRoute: FastifyPluginAsync = async (fastify, opts) => {
   fastify.post<{ Body: RegisterRequestBody }>(
     '/register-request',
     async (req) => {
-      const { email, name } = req.body;
+      const { email, name, password } = req.body;
       const emailSplit = email.split('');
       const year = parseInt(`${emailSplit[4]}${emailSplit[5]}`, 10);
       const classNo = parseInt(`${emailSplit[6]}${emailSplit[7]}`, 10);
 
-      return UserService.RegisterRequest(name, year, classNo);
+      return UserService.RegisterRequest(email, name, year, classNo, password);
     }
   );
 
