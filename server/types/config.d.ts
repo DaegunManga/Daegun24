@@ -22,6 +22,10 @@ declare global {
       TYPEORM_DROPSCHEMA: 'true' | 'false';
       TYPEORM_LOGGING: 'true' | 'false';
 
+      // Superuser Setting
+      SU_ID: string;
+      SU_PW: string;
+
       // Redis Setting
       REDIS_HOST: string;
       REDIS_PORT: string;
