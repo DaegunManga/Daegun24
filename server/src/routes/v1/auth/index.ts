@@ -16,11 +16,6 @@ const authRoute: FastifyPluginAsync = async (fastify, opts) => {
     return AuthService.Login(email, password);
   });
 
-  fastify.register(secureRoute, { prefix: '/' });
-};
-
-const secureRoute: FastifyPluginAsync = async (fastify, opts) => {
-  fastify.register(isLoggedIn);
   fastify.post<{ Headers: RefreshTokenHeader }>(
     '/refresh-token',
     async (req, res) => {
