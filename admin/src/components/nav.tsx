@@ -16,11 +16,11 @@ function App() {
         <hr className="bold_line"/>
         <br />
 
-        <Link to="/from" className="Nav_Link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img className='icon' src={user_icon} alt='icon'></img><span className="Nav_Text"> &nbsp;Members</span></Link><br/>
+        <Link to="/Main/members" className="Nav_Link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img className='icon' src={user_icon} alt='icon'></img><span className="Nav_Text"> &nbsp;Members</span></Link><br/>
         <br />
         <hr />
         <br />
-        <Link to="/from" className="Nav_Link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img className='icon' src={button_icon} alt='icon'></img><span className="Nav_Text"> &nbsp;공지사항</span></Link><br/>
+        <Link to="/Main/notions" className="Nav_Link">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img className='icon' src={button_icon} alt='icon'></img><span className="Nav_Text"> &nbsp;공지사항</span></Link><br/>
       </div>
 
   );

@@ -1,0 +1,52 @@
+.MainPage {
+    width: auto;
+    height: auto;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+        
+}
+
+.MembersMain {
+    width: 90rem;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+.MembersBorderLine{
+    color: black;
+    background-color: black;
+    height: 0.1rem;
+    width: 70rem;
+    position: absolute;
+    left: 17rem;
+    top: 7.8rem;
+}
+
+.MembersBorderBox{
+    padding-top: 5rem;
+    width: 70rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.MemberInfo{
+    width: 60rem;
+}
+
+.MembersUsername{
+    padding-left: 2rem;
+}
+
+.MembersUsername_title{
+    padding-left: 2rem;
+    color: black;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+.MembersNameBox{
+    display: flex;
+    flex-direction: column;
+}
