@@ -18,10 +18,14 @@
     color: black;
     background-color: black;
     height: 0.1rem;
-    width: 70vw;
-    position: absolute;
-    left: 17rem;
-    top: 7.8rem;
+    width: 90rem;   
+}
+
+.MembersBorderLine_small {
+    color: gray;
+    background-color: gray;
+    height: 0.05rem;
+    width: 90rem;
 }
 
 .MembersBorderBox{

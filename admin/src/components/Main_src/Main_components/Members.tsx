@@ -1,8 +1,19 @@
+import React, { useEffect, useState } from "react";
 import "./Members.css";
 import Nav from '../../nav';
+import axios from "axios";
 
 function App() {
 
+    let [UserList, setUserList] = useState<string[]>([]);
+
+
+    useEffect(() => {
+        axios.get("http://localhost:8000/api/users", { }).then((res) => { 
+        console.log(res.data.UserIdList);
+        setUserList(res.data.UserIdList);
+        }); 
+    }, []);
     return (
         <div className ='MainPage'>
             <Nav/>
@@ -10,22 +21,18 @@ function App() {
             <div className="MembersMain">
                 <div className='MembersBorderBox'>
                     <div className='MembersNameBox'>
-                        <span className='MembersUsername_title'> UserName</span>
+                        <span className='MembersUsername_title'> Admin</span>
+                        <hr className="MembersBorderLine"/>
                         <br />
-                        <span className='MembersUsername'> LeeDowon </span>
-                    </div>
-                    <div className='MembersNameBox'>
-                        <span className='MembersUsername_title'> UserInfo </span>
-                        <br />
-                        <span className='MembersUsername'> LeeDowon </span>
-                    </div>
-                    <div className='MembersNameBox'>
-                        <span className='MembersUsername_title'> Delete </span>
-                        <br />
-                        <span className='MembersUsername'> LeeDowon </span>
+                        {UserList.map((it)=>(
+                        <div>
+                            <span className='MembersUsername'> {it} </span>
+                            <hr className="MembersBorderLine_small"/>
+                        </div>
+                        ))}
                     </div>
                     
-                    <hr className="MembersBorderLine"/>
+                    
                 </div>
             </div>
         </div>
