@@ -20,8 +20,8 @@ function App() {
   const onClickLogin = () => {
     axios
       .post("http://localhost:8000/users/login/", {
-        username: setId,
-        password: setPw,
+        username: id,
+        password: pw,
       })
       .then((res) => {
         if (res.data.token) {
