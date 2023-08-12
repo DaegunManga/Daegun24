@@ -5,10 +5,10 @@ import axios from "axios";
 
 function App() {  
 
-/*  axios.post("http://localhost:8000/api/users", { }, {  }).then((res) => { 
+  axios.get("http://localhost:8000/api/users", { }).then((res) => { 
     console.log(res.data);
     
-  }); */
+  }); 
 
 
   return (
