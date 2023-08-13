@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { ChangeEvent } from "react";
 
 function App() {
   let [id, setId] = useState<string>("");
@@ -9,11 +10,11 @@ function App() {
   const [button, setButton] = useState(true);
   const navigate = useNavigate();
 
-  const handleInputId = (e: any) => {
+  const handleId = (e: ChangeEvent<HTMLInputElement>) => {
     setId(e.target.value);
   };
 
-  const handleInputPw = (e: any) => {
+  const handlePw = (e: ChangeEvent<HTMLInputElement>) => {
     setPw(e.target.value);
   };
 
@@ -35,9 +36,9 @@ function App() {
       <h1 className="login_title">Daegun24 Admin page</h1>
       <div className="login_form">
         <label>ID</label>
-        <input type="text" name="id" value={id} onChange={handleInputId} />
+        <input type="text" name="id" value={id} onChange={handleId} />
         <label className="login_pw_label">Password</label>
-        <input type="text" name="pw" value={pw} onChange={handleInputPw} />
+        <input type="text" name="pw" value={pw} onChange={handlePw} />
         <button className="login_btn" onClick={onClickLogin}>
           Login
         </button>
