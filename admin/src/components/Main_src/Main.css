@@ -1,9 +1,14 @@
 .MainPage {
-    width: auto;
-    height: auto;
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-        
+  width: auto;
+  height: auto;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
 }
 
+.Main_title {
+  font-size: 2rem;
+  margin: auto;
+  margin-top: 2rem;
+  color: black;
+}
