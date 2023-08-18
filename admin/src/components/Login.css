@@ -1,16 +1,58 @@
+.login_back {
+  background-color: #f7f7f7;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_container {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.login_input {
+  padding: 0.5rem 0.3rem 0.5rem 0.3rem;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  border: 2px solid #eaeaea;
+  outline: none !important;
+  border-radius: 0.25rem;
+}
+
+.login_input:focus {
+  border: 2px solid #2a6eff;
+}
+
+.login_logo {
+  padding-top: 0;
+  margin-left: 3rem;
+}
+
+.login_logo_dg24 {
+  margin-top: 2rem;
+  width: 20%;
+  height: 10%;
+}
 .login_main {
+  margin-top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 4rem;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .login_title {
   text-align: center;
   display: row;
   font-size: 2rem;
-  margin-top: 2rem;
 }
 
 .login_form {
@@ -22,9 +64,15 @@
 
 .login_btn {
   margin-top: 1rem;
-  width: 30%;
+  width: 100%;
   display: flex;
   justify-content: center;
+  padding: 0.7rem 0;
+  border-radius: 0.5rem;
+  outline: none;
+  border: none;
+  background: #2a6eff;
+  color: white;
 }
 
 .login_explain {
