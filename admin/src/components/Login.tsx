@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Login.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { ChangeEvent } from "react";
+import { ChangeEvent, KeyboardEvent } from "react";
 
 function App() {
   let [id, setId] = useState<string>("");
@@ -16,6 +16,12 @@ function App() {
 
   const handlePw = (e: ChangeEvent<HTMLInputElement>) => {
     setPw(e.target.value);
+  };
+
+  const handleKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      onClickLogin();
+    }
   };
 
   const onClickLogin = () => {
@@ -34,15 +40,23 @@ function App() {
   return (
     <div className="login_main">
       <h1 className="login_title">Daegun24 Admin page</h1>
-      <div className="login_form">
-        <label>ID</label>
-        <input type="text" name="id" value={id} onChange={handleId} />
-        <label className="login_pw_label">Password</label>
-        <input type="text" name="pw" value={pw} onChange={handlePw} />
-        <button className="login_btn" onClick={onClickLogin}>
-          Login
-        </button>
-      </div>
+      <form>
+        <div className="login_form">
+          <label>ID</label>
+          <input type="text" name="id" value={id} onChange={handleId} />
+          <label className="login_pw_label">Password</label>
+          <input
+            type="text"
+            name="pw"
+            value={pw}
+            onChange={handlePw}
+            onKeyDown={handleKeyPress}
+          />
+          <button className="login_btn" onClick={onClickLogin}>
+            Login
+          </button>
+        </div>
+      </form>
       <div className="login_explain">
         <p>Daegun24 admin page login</p>
       </div>
