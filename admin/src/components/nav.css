@@ -1,36 +1,40 @@
 .LeftBar {
-    background-color: black;
-    width: 10rem;
-    height: 100vh;
+  background-color: rgb(70, 70, 70);
+  width: 10rem;
+  height: 100vh;
 }
 
 .MainText {
-    padding-left: 2rem;
-    margin-top: 2rem;
-    color: white;
+  padding-left: 2rem;
+  margin-top: 2rem;
+  color: white;
 }
 
 .Nav_Link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .Nav_Text {
-    color: white;
+  color: white;
 }
 
+.Nav_logo {
+  padding-top: 2rem;
+  margin-left: 1rem;
+  width: 80%;
+}
 .Nav_Link:hover > .Nav_Text {
-    color: gray;
+  color: gray;
 }
-
 
 .icon {
-    width: 1rem;
-    height: auto;
+  width: 1rem;
+  height: auto;
 }
 
-.bold_line{
-    height: 0.2rem;
+.bold_line {
+  height: 0.2rem;
 
-    color: white;
-    background-color: white;
+  color: white;
+  background-color: white;
 }
